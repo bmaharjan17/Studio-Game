@@ -37,15 +37,18 @@ player1 = Player.new("moe")
 player2 = Player.new("larry", 60)
 player3 = Player.new("curly", 125)
 
-puts player1
-puts player2
-puts player3
-puts player3.blam
-puts player3
-puts player3.w00t
-puts player3
+players = [player1, player2, player3]
 
-puts player1.health
+puts "There are #{players.size} players in the game"
 
-player2.name = "lawrence"
-puts player2.name
+players.each do |p|
+    p.blam
+    p.w00t
+    p.w00t
+    puts p
+end
+
+players.pop
+player4 = Player.new("Shemp", 90)
+players.push(player4)
+puts players
