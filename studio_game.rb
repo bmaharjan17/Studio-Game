@@ -48,18 +48,16 @@ class Game
 
     def play
         puts "There are #{@players.size} players in #{@title}"
-
         @players.each do |player|
-            puts player 
-        end
-
-        @players.each do |player|
-            player.blam
-            player.w00t
-            player.w00t
             puts player
         end
 
+        @players.each do |player|
+            player.w00t
+            player.blam
+            player.w00t
+            puts player
+        end
     end
 
 end
@@ -73,3 +71,11 @@ knuckleheads.add_player(player1)
 knuckleheads.add_player(player2)
 knuckleheads.add_player(player3)
 knuckleheads.play
+
+chipmunks = Game.new("Chipmunks")
+player4 = Player.new("Alvin", 80)
+player5 = Player.new("Simon")
+chipmunks.add_player(player5)
+chipmunks.add_player(player4)
+chipmunks.add_player(player1)
+chipmunks.play
