@@ -1,5 +1,4 @@
 class Player
-
     attr_reader :health
     attr_accessor :name 
 
@@ -28,9 +27,7 @@ class Player
 
     def name=(new_name)
         @name = new_name.capitalize
-    end
-
-    
+    end  
 end
 
 class Game
@@ -66,16 +63,16 @@ player1 = Player.new("moe")
 player2 = Player.new("larry", 60)
 player3 = Player.new("curly", 125)
 
-knuckleheads = Game.new("Knuckleheads")
-knuckleheads.add_player(player1)
-knuckleheads.add_player(player2)
-knuckleheads.add_player(player3)
-knuckleheads.play
+games = Game.new("Knucklehead")
+games.add_player(player1)
+games.add_player(player2)
+games.add_player(player3)
+games.play
 
-chipmunks = Game.new("Chipmunks")
+games = Game.new("Chipmunks")
 player4 = Player.new("Alvin", 80)
 player5 = Player.new("Simon")
-chipmunks.add_player(player5)
-chipmunks.add_player(player4)
-chipmunks.add_player(player1)
-chipmunks.play
+games.add_player(player5)
+games.add_player(player4)
+games.add_player(player1)
+games.play
